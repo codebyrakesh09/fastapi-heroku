@@ -1,0 +1,22 @@
+Use .venv/Scripts/python.exe interpreter from your virtual environment. local not global.
+pip install fastapi[all] , it will download all the related dependies.
+pip freeze , show all packages with versions.
+The Http method will search path from top to bottom and execute the very first matched path. (order of the path does matter.)
+pip index versions <package name>  -> to list all the package versions name.
+print(new_post.dict()) - > .dict() is depricated in new version of pydantic use .model_dump() for dictionary and .model_dump_json() for json.
+Order of the endpoint matters: example: @app.post("/post/{id}") and @app.post("/post/latest") can cause conflict.
+See the list of the status code 200 to 500(for server issue) 
+Response library from fastapi
+status library from fastapi, status.HTTP_404_NOT_FOUND
+The dot (.) means current directory like...
+(from fastapi.security.oauth2 import OAuth2PasswordRequestForm  # this only takes form data with username and password.) it requires you to insert form data into. 
+datetime.utcnow() is depricated use datetime.now(timezone.utc)
+query parameters = (?v=omB2JkC4QfA), https://www.youtube.com/watch?v=omB2JkC4QfA
+query parameters = filters the result of the request. 
+?limit=8
+?limit=8&skip=1
+?search=my
+
+from pydantic import BaseSettings -> it is depricated
+Instead install:
+pip install pydantic-settings
